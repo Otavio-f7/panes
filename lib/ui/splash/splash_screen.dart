@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:panes/ui/_core/app_colors.dart';
+import 'package:panes/ui/home/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -41,7 +42,9 @@ class _SplashScreenState extends State<SplashScreen> {
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: (){}, 
+                      onPressed: (){
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (ctx)=>HomeScreen()));
+                      }, 
                       child: Text('Fazer pedido!'),
                     )
                   )
